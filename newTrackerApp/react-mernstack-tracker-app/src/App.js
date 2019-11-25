@@ -9,9 +9,9 @@ import "./App.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import CreateTracker from "./components/create-tracker.component";
-import EditTracker from "./components/edit-tracker.component";
-import TrackerList from "./components/tracker-list.component";
+import CreateTracker from "./components/Tracker/create-tracker.component";
+import EditTracker from "./components/Tracker/edit-tracker.component";
+import TrackerList from "./components/Tracker/tracker-list.component";
 
 function App() {
   return (<Router>
