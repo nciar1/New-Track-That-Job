@@ -1,12 +1,12 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-
+import NavBar from "./components/NavBar/NavBar"
+ 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import CreateTracker from "./components/create-tracker.component";
@@ -16,40 +16,7 @@ import TrackerList from "./components/tracker-list.component";
 function App() {
   return (<Router>
     <div className="App">
-      <header className="App-header">
-        <Navbar bg="dark" variant="dark">
-          <Container>
-
-            <Navbar.Brand>
-              <Link to={"/create-tracker"} className="nav-link">
-                React MERN Stack App
-              </Link>
-            </Navbar.Brand>
-
-            <Nav className="justify-content-end">
-              <Nav>
-                <Link to={"/create-tracker"} className="nav-link">
-                  Create Tracker
-                </Link>
-              </Nav>
-
-              <Nav>
-                <Link to={"/edit-tracker/:id"} className="nav-link">
-                  Edit Tracker
-                </Link>
-              </Nav> 
-
-              <Nav>
-                <Link to={"/tracker-list"} className="nav-link">
-                  Tracker List
-                </Link>
-              </Nav>
-            </Nav>
-
-          </Container>
-        </Navbar>
-      </header>
-
+     <NavBar />
       <Container>
         <Row>
           <Col md={12}>
