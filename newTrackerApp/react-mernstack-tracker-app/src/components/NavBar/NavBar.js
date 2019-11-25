@@ -20,10 +20,10 @@ const NavBar = () => {
         <a class="nav-link" href="./views/Homepage">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tracker-list">App Tracker</a>
+        <a class="nav-link" href="/tracker-list">App Tracker <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./LogoutPage">Log Out</a>
+        <a class="nav-link" href="./LogoutPage">Log Out <span class="sr-only">(current)</span></a>
       </li>
     
     </ul>
