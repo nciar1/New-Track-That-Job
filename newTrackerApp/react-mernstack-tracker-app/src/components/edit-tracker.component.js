@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
-export default class EditStudent extends Component {
+export default class EditTracker extends Component {
 
   constructor(props) {
     super(props)
@@ -74,7 +74,7 @@ export default class EditStudent extends Component {
         console.log(error)
       })
 
-    // Redirect to Student List 
+    // Redirect to List 
     this.props.history.push('/tracker-list')
   }
 
@@ -103,7 +103,7 @@ export default class EditStudent extends Component {
         </Form.Group>
 
         <Button variant="danger" size="lg" block="block" type="submit">
-          Update Student
+          Update Tracker
         </Button>
       </Form>
     </div>);

@@ -27,6 +27,8 @@ function App() {
                 <Route path="/create-tracker" component={CreateTracker} />
                 <Route path="/edit-tracker/:id" component={EditTracker} />
                 <Route path="/tracker-list" component={TrackerList} />
+\
+
               </Switch>
             </div>
           </Col>

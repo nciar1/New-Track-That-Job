@@ -57,6 +57,9 @@ export default class CreateTracker extends Component {
     companyName: '',
     linkToApp: '',
     appDeadline: '' })
+
+    // Redirect to List 
+    this.props.history.push('/tracker-list')
   }
 
   render() {
@@ -86,6 +89,10 @@ export default class CreateTracker extends Component {
           Create Tracker
         </Button>
       </Form>
+
+
+
+
     </div>);
   }
 }

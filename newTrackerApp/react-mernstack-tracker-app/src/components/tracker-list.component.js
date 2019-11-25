@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import TrackerTableRow from './TrackerTableRow';
+import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
+
 
 
 export default class TrackerList extends Component {
@@ -33,20 +36,18 @@ export default class TrackerList extends Component {
 
 
   render() {
-    return (<div className="table-wrapper">
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Job Title</th>
-            <th>Company</th>
-            <th>Link to App</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
+    return (
+      <Container>
+      <Link className="edit-link" to={"/create-tracker/"}>
+                        Add Tracker
+                    </Link>
+  
           {this.DataTable()}
-        </tbody>
-      </Table>
-    </div>);
+       
+  
+    </Container>
+    
+    );
+
   }
 }
