@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
+import Stepper from 'react-stepper-horizontal';
+
 
 
 export default class CreateTracker extends Component {
@@ -160,18 +162,20 @@ export default class CreateTracker extends Component {
             <Form.Label>App Deadline </Form.Label>
             <Form.Control type="Date" value={this.state.AppDeadline} onChange={this.onChangeTrackerAppDeadline} />
           </Form.Group>
-  
-          
-              <div class="form-group">
-              <label for="group">Dropdown List</label>
-              <select value={this.state.progress} onChange={this.onChangeTrackerProgress} class="form-control">
-              <option value="0">Progress of App</option>
-              <option value="1">Application Started</option>
-              <option value="2">Application Submitted</option>
-              <option value="3">Interview Scheduled</option>
-              <option value="4">Interview Complete, Awaiting Response</option>
-              </select>
-              </div> 
+
+          <Form.Group controlId="Number">
+            <Form.Label>Rank Your Progress </Form.Label>
+            <Form.Control type="Number" value={this.state.progress} onChange={this.onChangeTrackerAppProgress} />
+          </Form.Group>
+
+          <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.state.progress } />
+
+
+
+
+
+        
+ 
      
   
     <Accordion>
@@ -203,6 +207,10 @@ export default class CreateTracker extends Component {
             <Form.Label>additionalNotes </Form.Label>
             <Form.Control type="textarea" value={this.state.additionalNotes} onChange={this.onChangeTrackerAdditionalNotes} />
           </Form.Group>
+
+
+        						
+      
   
         </Card.Body>
       </Accordion.Collapse>

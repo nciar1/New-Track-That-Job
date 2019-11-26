@@ -1,4 +1,4 @@
-
+import progressForm from './components/progressForm/'
 import React, { Component } from 'react'
 
 export default class AppTrackerInfo extends Component {
@@ -175,16 +175,24 @@ export default class AppTrackerInfo extends Component {
             <Form.Label>App Deadline </Form.Label>
             <Form.Control type="Date" value={this.state.AppDeadline} onChange={this.onChangeTrackerAppDeadline} />
           </Form.Group>
-  
-          <Form.Group controlId="Number">
-            <Form.Label>Progress</Form.Label>
-            <select value={this.state.progress} onChange={this.onChangeTrackerProgress}>
-            <option value="1">Application Started</option>
-            <option value="2">Application Submmitted</option>
-            <option value="3">Interview Scheduled</option>
-            <option value="4">Interview Complete, Awaiting Response</option>
-              </select>
-          </Form.Group>
+          
+          
+          <form action="" method="post">
+    <select name="progress" id="progress" onchange="javascript:this.form.submit()">
+        <option value="0">Choose</option>
+        <option value="1">Toyota</option>
+        <option value="2">Nissan</option>
+        <option value="3">Dodge</option>
+    </select> 
+    <input type="submit" name="submit" value="Submit"/>
+      </form>
+        
+
+
+
+
+
+          
      
         
   
