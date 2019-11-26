@@ -7,10 +7,9 @@ import Notepad from '../../components/Notepad/Notepad';
 function Home() {
     return (
         <div className="App">
-            Hello Test
             <header className="App-header">
                 <p>
-                   Home Page
+                   Dashboard
                 </p>
             </header>
             <body className="App-Body">
