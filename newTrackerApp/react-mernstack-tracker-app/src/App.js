@@ -29,7 +29,7 @@ function App() {
                 <Route exact path='/Homepage' component={Homepage} />
                 <Route exact path="/">
                    <Redirect to="/Homepage" />
-                </Route>
+                </Route>xx
                 <Route path="/create-tracker" component={CreateTracker} />
                 <Route path="/create-tracker" component={CreateTracker} />
                 <Route path="/edit-tracker/:id" component={EditTracker} />
