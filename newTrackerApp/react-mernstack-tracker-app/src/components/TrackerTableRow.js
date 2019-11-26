@@ -38,18 +38,26 @@ export default class TrackerTableRow extends Component {
 						<p className="product-description">{this.props.obj.linkToApp}</p>
                         <p className="product-description">{this.props.obj.appDeadline}</p>
                         <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.props.obj.progress } />
-                       
+                        <div class="row">
+                        <div class="col-md-3">
                         <Link className="edit-link" to={"/edit-tracker/" + this.props.obj._id}>
                         Edit
                     </Link>
+                    </div>
+                    
+                    <div class="col-md-6">
                     <Link className="link" to={"/.ViewFullTracker" + this.props.obj._id}>
                         View More Info
                     </Link>
+                    </div>
+
+                    <div class="col-md-3">
                     <Button onClick={this.deleteTracker} size="sm" variant="danger">Delete</Button>
-					
+					</div>
 					</div>
 				</div>
 			</div>
+            </div>
             </div>
 
 			
