@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import Accordion from 'react-bootstrap/Accordion'
+import Card from 'react-bootstrap/Card'
 
 export default class EditTracker extends Component {
 
@@ -101,6 +103,31 @@ export default class EditTracker extends Component {
           <Form.Label>App Deadline</Form.Label>
           <Form.Control type="date" value={this.state.appDeadline} onChange={this.onChangeTrackerAppDeadline} />
         </Form.Group>
+
+
+        <Accordion>
+  <Card>
+    <Card.Header>
+      <Accordion.Toggle as={Button} variant="link" eventKey="0">
+        Click me!
+      </Accordion.Toggle>
+    </Card.Header>
+    <Accordion.Collapse eventKey="0">
+      <Card.Body>Hello! I'm the body</Card.Body>
+    </Accordion.Collapse>
+  </Card>
+  <Card>
+    <Card.Header>
+      <Accordion.Toggle as={Button} variant="link" eventKey="1">
+        Click me!
+      </Accordion.Toggle>
+    </Card.Header>
+    <Accordion.Collapse eventKey="1">
+      <Card.Body>Hello! I'm another body</Card.Body>
+    </Accordion.Collapse>
+  </Card>
+</Accordion>
+
 
         <Button variant="danger" size="lg" block="block" type="submit">
           Update Tracker
