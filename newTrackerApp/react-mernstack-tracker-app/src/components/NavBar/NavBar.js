@@ -15,7 +15,7 @@ return (
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="./views/Homepage">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="./Homepage">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/tracker-list">App Tracker</a>

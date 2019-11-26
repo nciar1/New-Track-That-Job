@@ -21,10 +21,7 @@ export default class TrackerTableRow extends Component {
             }).catch((error) => {
                 console.log(error)
             })
-        
-
-            // Redirect to List 
-    this.props.history.push('/tracker-list')
+    
     }
 
     render() {
