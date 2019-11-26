@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,7 +7,7 @@ import "./App.css";
 import NavBar from "./components/NavBar/NavBar"
 import Homepage from "./views/Homepage"
  
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import CreateTracker from "./components/create-tracker.component";
 import EditTracker from "./components/edit-tracker.component";

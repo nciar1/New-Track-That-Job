@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import Table from 'react-bootstrap/Table';
 import TrackerTableRow from './TrackerTableRow';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';

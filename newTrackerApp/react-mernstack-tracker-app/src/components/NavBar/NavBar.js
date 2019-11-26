@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
-
+import logo from './logo.png';
 const NavBar = () => {
 return (
     <div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="./views/Homepage">Logo</a>
+  <a class="navbar-brand" href="./views/Homepage">
+  <img src={logo} style={{width:40, marginTop: -7}} />
+  Track That Job
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
