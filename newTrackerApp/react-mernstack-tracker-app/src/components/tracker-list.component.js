@@ -37,12 +37,34 @@ export default class TrackerList extends Component {
   render() {
     return (
       <Container>
+        <div class="row">
+          
       <Link className="edit-link" to={"/create-tracker/"}>
-                        Add Tracker
+                        + Add Tracker
                     </Link>
+                    <div class="col-sm-7"></div>
+                    <div class="col-sm-3"></div>
+                   
+         
+
+                    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sort
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Date</a>
+    <a class="dropdown-item" href="#">Job</a>
+    <a class="dropdown-item" href="#">Company</a>
+    <a class="dropdown-item" href="#">Favorites</a>
+
+  </div>
+</div>  
+
+</div> 
+
   
           {this.DataTable()}
-       
+          
   
     </Container>
     
