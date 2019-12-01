@@ -28,7 +28,7 @@ router.route('/').get((req, res) => {
   })
 })
 
-// Get Single Tracker
+// Edit Tracker
 router.route('/edit-tracker/:id').get((req, res) => {
   trackerSchema.findById(req.params.id, (error, data) => {
     if (error) {
@@ -39,21 +39,21 @@ router.route('/edit-tracker/:id').get((req, res) => {
   })
 })
 
-
-// Update Tracker
-router.route('/update-tracker/:id').put((req, res, next) => {
-  trackerSchema.findByIdAndUpdate(req.params.id, {
-    $set: req.body
-  }, (error, data) => {
+// View Tracker
+router.route('/view-tracker/:id').get((req, res) => {
+  trackerSchema.findById(req.params.id, (error, data) => {
     if (error) {
-      return next(error);
-      console.log(error)
+      return next(error)
     } else {
       res.json(data)
       console.log('Tracker updated successfully !')
+
     }
   })
 })
+
+
+
 
 // Delete Tracker
 router.route('/delete-tracker/:id').delete((req, res, next) => {

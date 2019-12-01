@@ -5,7 +5,7 @@ import axios from 'axios';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 
-export default class EditTracker extends Component {
+export default class AppTrackerInfo extends Component {
 
   constructor(props) {
     super(props)

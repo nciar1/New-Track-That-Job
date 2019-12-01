@@ -12,6 +12,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CreateTracker from "./components/create-tracker.component";
 import EditTracker from "./components/edit-tracker.component";
 import TrackerList from "./components/tracker-list.component";
+import AppTrackerInfo from "./components/AppTrackerInfo";
+
 
 function App() {
   return (<Router>
@@ -26,6 +28,8 @@ function App() {
                 <Route path="/create-tracker" component={CreateTracker} />
                 <Route path="/edit-tracker/:id" component={EditTracker} />
                 <Route path="/tracker-list" component={TrackerList} />
+                <Route path="/view-tracker/:id" component={AppTrackerInfo} />
+
 \
 
               </Switch>

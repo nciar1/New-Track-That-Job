@@ -46,7 +46,7 @@ export default class TrackerTableRow extends Component {
                     </div>
                     
                     <div class="col-md-6">
-                    <Link className="link" to={"/.ViewFullTracker" + this.props.obj._id}>
+                    <Link className="link" to={"/view-tracker/" + this.props.obj._id}>
                         View More Info
                     </Link>
                     </div>
