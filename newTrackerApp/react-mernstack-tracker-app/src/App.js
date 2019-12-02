@@ -10,11 +10,11 @@ import AppTrackerView from "./views/AppTracker/AppTrackerView"
 import LogoutPage from "./views/Logout/LogoutPage"
 import NotFound from "./views/NotFound"
  
-<<<<<<< .merge_file_aOZ44i
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-=======
+
+//import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from "react-router-dom";
->>>>>>> .merge_file_Cws93g
+
 
 import CreateTracker from "./components/Tracker/create-tracker.component";
 import EditTracker from "./components/Tracker/edit-tracker.component";
@@ -37,13 +37,13 @@ function App() {
                 <Route path="/create-tracker" component={CreateTracker} />
                 <Route path="/edit-tracker/:id" component={EditTracker} />
                 <Route path="/tracker-list" component={TrackerList} />
-<<<<<<< .merge_file_aOZ44i
+
 \
-=======
+
 
                 <Route path="/LogoutPage" component={LogoutPage} />
                 <Route component={NotFound}/>
->>>>>>> .merge_file_Cws93g
+
 
               </Switch>
             </div>
