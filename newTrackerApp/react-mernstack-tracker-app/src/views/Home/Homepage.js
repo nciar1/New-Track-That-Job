@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Calendar from '../../components/Calendar/Calendar';
-import Notepad from '../../components/Notepad/Notepad.js';
+import Notepad from '../../components/Notepad/notepad.js';
 import ToDo from '../../components/ToDo/ToDo'
 
 
