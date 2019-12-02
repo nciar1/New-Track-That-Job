@@ -189,9 +189,6 @@ export default class EditTracker extends Component {
           </Form.Group>
 
           <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.state.progress } />
-
-
-
      
         
   

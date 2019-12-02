@@ -5,15 +5,21 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar"
-import Homepage from "./views/Homepage"
+import Homepage from "./views/Home/Homepage"
+import AppTrackerView from "./views/AppTracker/AppTrackerView"
+import LogoutPage from "./views/Logout/LogoutPage"
+import NotFound from "./views/NotFound"
  
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import CreateTracker from "./components/create-tracker.component";
-import EditTracker from "./components/edit-tracker.component";
-import TrackerList from "./components/tracker-list.component";
+//import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { BrowserRouter as Router, Switch, Route, Redirect, Link } from "react-router-dom";
+
+
+import CreateTracker from "./components/Tracker/create-tracker.component";
+import EditTracker from "./components/Tracker/edit-tracker.component";
+import TrackerList from "./components/Tracker/tracker-list.component";
 import AppTrackerInfo from "./components/AppTrackerInfo";
-
 
 function App() {
   return (<Router>
@@ -25,12 +31,21 @@ function App() {
             <div className="wrapper">
               <Switch>
                 <Route exact path='/Homepage' component={Homepage} />
+                <Route exact path="/">
+                   <Redirect to="/Homepage" />
+                </Route>xx
+                <Route path="/create-tracker" component={CreateTracker} />
                 <Route path="/create-tracker" component={CreateTracker} />
                 <Route path="/edit-tracker/:id" component={EditTracker} />
                 <Route path="/tracker-list" component={TrackerList} />
                 <Route path="/view-tracker/:id" component={AppTrackerInfo} />
 
 \
+
+
+                <Route path="/LogoutPage" component={LogoutPage} />
+                <Route component={NotFound}/>
+
 
               </Switch>
             </div>
