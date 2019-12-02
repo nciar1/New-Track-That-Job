@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
+import Stepper from 'react-stepper-horizontal';
+import './AppTrackerInfo.css'
 
 export default class AppTrackerInfo extends Component {
 
@@ -22,11 +24,6 @@ export default class AppTrackerInfo extends Component {
     this.onChangeTrackerWhatTheyDo = this.onChangeTrackerWhatTheyDo.bind(this);
     this.onChangeTrackerWebsite= this.onChangeTrackerWebsite.bind(this);
     this.onChangeTrackerStar= this.onChangeTrackerStar.bind(this);
-
-
-
-
-
     this.onSubmit = this.onSubmit.bind(this);
 
     // State
@@ -160,36 +157,15 @@ export default class AppTrackerInfo extends Component {
 
       <div className="form-wrapper">
       <Card.Header>General Tracker</Card.Header>
-          <Form onSubmit={this.onSubmit}>
-          <Form.Group controlId="Name">
-            <Form.Label>Job Title</Form.Label>
-            <Form.Control type="text" value={this.state.jobTitle} onChange={this.onChangeTrackerJobTitle} />
-          </Form.Group>
-  
-          <Form.Group controlId="Name">
-            <Form.Label>Company Name</Form.Label>
-            <Form.Control type="text" value={this.state.companyName} onChange={this.onChangeTrackerCompanyName} />
-          </Form.Group>
-  
-          <Form.Group controlId="Name">
-            <Form.Label>Link to App</Form.Label>
-            <Form.Control type="text" value={this.state.linkToApp} onChange={this.onChangeTrackerLinkToApp} />
-          </Form.Group>
-  
-          <Form.Group controlId="Date">
-            <Form.Label>App Deadline </Form.Label>
-            <Form.Control type="Date" value={this.state.AppDeadline} onChange={this.onChangeTrackerAppDeadline} />
-          </Form.Group>
-  
-          <Form.Group controlId="Number">
-            <Form.Label>Progress</Form.Label>
-            <select value={this.state.progress} onChange={this.onChangeTrackerProgress}>
-            <option value="1">Application Started</option>
-            <option value="2">Application Submmitted</option>
-            <option value="3">Interview Scheduled</option>
-            <option value="4">Interview Complete, Awaiting Response</option>
-              </select>
-          </Form.Group>
+          
+      <h1 className="product-description">{this.state.jobTitle}</h1>  
+   
+      <p className="product-description">   <b>Company Name: </b>{this.state.companyName}</p>  
+      <p className="product-description"> <b>App: </b>{this.state.linkToApp}</p>  
+      <p className="product-description"><b>Deadline: </b>{this.state.appDeadline}</p>  
+      <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.state.progress } />
+
+
      
         
   
@@ -198,32 +174,20 @@ export default class AppTrackerInfo extends Component {
       <Card>
       <Card.Header>
         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-          + Add Notes
+          + View Notes
         </Accordion.Toggle>
       </Card.Header>
       <Accordion.Collapse eventKey="0">
         <Card.Body>
-  
-        <Form.Group controlId="Name">
-            <Form.Label>Location </Form.Label>
-            <Form.Control type="text" value={this.state.location} onChange={this.onChangeTrackerLocation} />
-          </Form.Group>
-  
-          <Form.Group controlId="Number">
-            <Form.Label>Salary </Form.Label>
-            <Form.Control type="Number" value={this.state.salary} onChange={this.onChangeTrackerSalary} />
-          </Form.Group>
-  
-          <Form.Group controlId="text">
-            <Form.Label>Skills Required </Form.Label>
-            <Form.Control type="textarea" value={this.state.skillsRequired} onChange={this.onChangeTrackerSkillsRequired} />
-          </Form.Group>
-  
-          <Form.Group controlId="text">
-            <Form.Label>additionalNotes </Form.Label>
-            <Form.Control type="textarea" value={this.state.additionalNotes} onChange={this.onChangeTrackerAdditionalNotes} />
-          </Form.Group>
-  
+      
+
+        <p className="product-description"><b>Location: </b>{this.state.location} </p>
+        <p className="product-description"><b>Salary: </b>{this.state.salary} </p>
+
+        <p className="product-description"><b>Skills Required: </b>{this.state.skillsRequired} </p>
+
+        <p className="product-description"><b>Additional Notes: </b>{this.state.additionalNotes} </p>
+
         </Card.Body>
       </Accordion.Collapse>
     </Card>
@@ -236,20 +200,13 @@ export default class AppTrackerInfo extends Component {
       <Accordion.Collapse eventKey="1">
         <Card.Body>
         
-        <Form.Group controlId="text">
-            <Form.Label>Company Values </Form.Label>
-            <Form.Control type="textarea" value={this.state.companyValues} onChange={this.onChangeTrackerCompanyValues} />
-          </Form.Group>
-  
-          <Form.Group controlId="text">
-            <Form.Label> What they Do </Form.Label>
-            <Form.Control type="textarea" value={this.state.whatTheyDo} onChange={this.onChangeTrackerWhatTheyDo} />
-          </Form.Group>
-  
-          <Form.Group controlId="text">
-            <Form.Label> Website </Form.Label>
-            <Form.Control type="text" value={this.state.website} onChange={this.onChangeTrackerWebsite} />
-          </Form.Group>
+        <p className="product-description"><b>Company Values: </b>{this.state.companyValues} </p>
+
+        <p className="product-description"><b>What They Do: </b>{this.state.whatTheyDo} </p>
+        <p className="product-description"><b>Website: </b>{this.state.website} </p>
+
+
+
   
   
   
@@ -258,11 +215,13 @@ export default class AppTrackerInfo extends Component {
       </Accordion.Collapse>
     </Card>
   </Accordion>
+
+
   
-        <Button variant="danger" size="lg" block="block" type="submit">
-          Update Tracker
+  <Button variant="danger" size="lg" block="block" type="link">
+          Back to Tracker List
         </Button>
-      </Form>
+  
     
     </div>
     </div>

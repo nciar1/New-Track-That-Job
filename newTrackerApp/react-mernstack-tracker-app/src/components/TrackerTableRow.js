@@ -36,7 +36,7 @@ export default class TrackerTableRow extends Component {
 						<h3 className="props">{this.props.obj.jobTitle}</h3>
 						<p className="product-description">{this.props.obj.companyName}</p>
 						<p className="product-description">{this.props.obj.linkToApp}</p>
-                        <p className="product-description">{this.props.obj.appDeadline}</p>
+                        <p className="product-description"><a href={this.props.obj.appDeadline}/></p>
                         <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.props.obj.progress } />
                         <div class="row">
                         <div class="col-md-3">

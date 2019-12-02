@@ -155,7 +155,7 @@ export default class CreateTracker extends Component {
   
           <Form.Group controlId="Name">
             <Form.Label>Link to App</Form.Label>
-            <Form.Control type="text" value={this.state.linkToApp} onChange={this.onChangeTrackerLinkToApp} />
+            <Form.Control type="link" value={this.state.linkToApp} onChange={this.onChangeTrackerLinkToApp} />
           </Form.Group>
   
           <Form.Group controlId="Date">
@@ -165,7 +165,7 @@ export default class CreateTracker extends Component {
 
           <Form.Group controlId="Number">
             <Form.Label>Rank Your Progress </Form.Label>
-            <Form.Control type="Number" value={this.state.progress} onChange={this.onChangeTrackerAppProgress} />
+            <Form.Control type="Number" min="0" max="4" value={this.state.progress} onChange={this.onChangeTrackerAppProgress} />
           </Form.Group>
 
           <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.state.progress } />

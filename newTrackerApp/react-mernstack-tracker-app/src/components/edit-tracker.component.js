@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
+import Stepper from 'react-stepper-horizontal';
+
 
 export default class EditTracker extends Component {
 
@@ -182,14 +184,14 @@ export default class EditTracker extends Component {
           </Form.Group>
   
           <Form.Group controlId="Number">
-            <Form.Label>Progress</Form.Label>
-            <select value={this.state.progress} onChange={this.onChangeTrackerProgress}>
-            <option value="1">Application Started</option>
-            <option value="2">Application Submmitted</option>
-            <option value="3">Interview Scheduled</option>
-            <option value="4">Interview Complete, Awaiting Response</option>
-              </select>
+            <Form.Label>Rank Your Progress </Form.Label>
+            <Form.Control type="Number" min="0" max="4" value={this.state.progress} onChange={this.onChangeTrackerAppProgress} />
           </Form.Group>
+
+          <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.state.progress } />
+
+
+
      
         
   
