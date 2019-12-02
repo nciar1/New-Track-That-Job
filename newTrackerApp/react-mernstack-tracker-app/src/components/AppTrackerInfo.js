@@ -5,6 +5,8 @@ import axios from 'axios';
 import Accordion from 'react-bootstrap/Accordion'
 import Card from 'react-bootstrap/Card'
 import Stepper from 'react-stepper-horizontal';
+import { Link } from 'react-router-dom';
+
 
 export default class AppTrackerInfo extends Component {
 
@@ -217,9 +219,11 @@ export default class AppTrackerInfo extends Component {
 
 
   
-  <Button variant="danger" size="lg" block="block" type="link">
-          Back to Tracker List
-        </Button>
+  <Link to="/tracker-list">
+     <button type="button">
+          Back to List
+     </button>
+ </Link>
   
     
     </div>
