@@ -25,6 +25,8 @@ export default class AppTrackerInfo extends Component {
     this.onChangeTrackerWhatTheyDo = this.onChangeTrackerWhatTheyDo.bind(this);
     this.onChangeTrackerWebsite= this.onChangeTrackerWebsite.bind(this);
     this.onChangeTrackerStar= this.onChangeTrackerStar.bind(this);
+    this.onChangeTrackerLocation= this.onChangeTrackerLocation.bind(this);
+
     this.onSubmit = this.onSubmit.bind(this);
 
     // State
@@ -40,7 +42,8 @@ export default class AppTrackerInfo extends Component {
       companyValues:'',
       whatTheyDo:'',
       website:'',
-      star: ''
+      star: '',
+      location:''
       
     }
   }
@@ -60,7 +63,8 @@ export default class AppTrackerInfo extends Component {
       companyValues:res.data.companyValues,
       whatTheyDo:res.data.whatTheyDo,
       website:res.data.website,
-      star: res.data.star
+      star: res.data.star,
+      location: res.data.location
 
         });
 
@@ -119,6 +123,9 @@ export default class AppTrackerInfo extends Component {
     this.setState({ star: e.target.value })
   }
 
+  onChangeTrackerLocation(e) {
+    this.setState({ location: e.target.value })
+  }
   onSubmit(e) {
     e.preventDefault()
 

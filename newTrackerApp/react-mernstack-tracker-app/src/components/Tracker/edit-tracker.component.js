@@ -24,6 +24,7 @@ export default class EditTracker extends Component {
     this.onChangeTrackerWhatTheyDo = this.onChangeTrackerWhatTheyDo.bind(this);
     this.onChangeTrackerWebsite= this.onChangeTrackerWebsite.bind(this);
     this.onChangeTrackerStar= this.onChangeTrackerStar.bind(this);
+    this.onChangeTrackerLocation= this.onChangeTrackerLocation.bind(this);
 
 
 
@@ -44,7 +45,8 @@ export default class EditTracker extends Component {
       companyValues:'',
       whatTheyDo:'',
       website:'',
-      star: ''
+      star: '',
+      location: ''
       
     }
   }
@@ -64,7 +66,8 @@ export default class EditTracker extends Component {
       companyValues:res.data.companyValues,
       whatTheyDo:res.data.whatTheyDo,
       website:res.data.website,
-      star: res.data.star
+      star: res.data.star,
+      location: res.data.location
 
         });
 
@@ -121,6 +124,9 @@ export default class EditTracker extends Component {
 
   onChangeTrackerStar(e) {
     this.setState({ star: e.target.value })
+  }
+  onChangeTrackerLocation(e) {
+    this.setState({ location: e.target.value })
   }
 
   onSubmit(e) {

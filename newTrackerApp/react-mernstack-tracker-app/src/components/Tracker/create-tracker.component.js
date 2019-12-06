@@ -25,6 +25,8 @@ export default class CreateTracker extends Component {
     this.onChangeTrackerWhatTheyDo = this.onChangeTrackerWhatTheyDo.bind(this);
     this.onChangeTrackerWebsite= this.onChangeTrackerWebsite.bind(this);
     this.onChangeTrackerStar= this.onChangeTrackerStar.bind(this);
+    this.onChangeTrackerLocation= this.onChangeTrackerLocation.bind(this);
+
 
     this.onSubmit = this.onSubmit.bind(this);
 
@@ -41,7 +43,8 @@ export default class CreateTracker extends Component {
       companyValues:'',
       whatTheyDo:'',
       website:'',
-      star: ''
+      star: '',
+      location:''
       
     }
   }
@@ -52,6 +55,9 @@ export default class CreateTracker extends Component {
 
   onChangeTrackerCompanyName(e) {
     this.setState({ companyName: e.target.value })
+  }
+  onChangeTrackerLocation(e) {
+    this.setState({ location: e.target.value })
   }
 
   onChangeTrackerLinkToApp(e) {
@@ -124,6 +130,7 @@ export default class CreateTracker extends Component {
     linkToApp: '',
     appDeadline: '',
     progress: '',
+    location: '',
     salary: '',
     skillsRequired: '',
     additionalNotes:'',
