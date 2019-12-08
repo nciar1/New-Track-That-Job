@@ -170,7 +170,7 @@ export default class AppTrackerInfo extends Component {
    
       <p className="product-description">   <b>Company Name: </b>{this.state.companyName}</p>  
       <p className="product-description"> <b>App: </b>
-      <a href={this.state.linkToApp}>{this.state.linkToApp}</a>
+      <a href={this.state.linkToApp}target="_blank">{this.state.linkToApp}</a>
       </p>  
       <p className="product-description"><b>Deadline: </b>{this.state.appDeadline}</p>  
       <Stepper steps={ [{title: 'App Started'}, {title:'App Submitted'}, {title: 'Interview Scheduled'}, {title: 'Interview Complete, Awaiting Response'}] } activeStep={ this.state.progress } />
@@ -213,9 +213,8 @@ export default class AppTrackerInfo extends Component {
         <p className="product-description"><b>Company Values: </b>{this.state.companyValues} </p>
 
         <p className="product-description"><b>What They Do: </b>{this.state.whatTheyDo} </p>
-        <p className="product-description"><b>Website: </b> {this.setState.website}
-         </p>
-
+        <a href={this.state.website}target="_blank"><b>Website: </b>{this.state.website}</a>
+        
 
 
   

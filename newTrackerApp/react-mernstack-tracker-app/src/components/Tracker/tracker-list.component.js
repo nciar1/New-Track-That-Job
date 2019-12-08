@@ -56,7 +56,6 @@ export default class TrackerList extends Component {
     <a class="dropdown-item" href="#">Job</a>
     <a class="dropdown-item" href="#">Company</a>
     <a class="dropdown-item" href="#">Favorites</a>
-
   </div>
 </div>  
 

@@ -37,7 +37,7 @@ export default class TrackerTableRow extends Component {
 						<h3 className="props">{this.props.obj.jobTitle}</h3>
 						<p className="product-description">{this.props.obj.companyName}</p>
 						<p className="product-description">
-                        <a href={this.props.obj.linkToApp}>{this.props.obj.linkToApp}</a>
+                        <a href={this.props.obj.linkToApp} target="_blank">{this.props.obj.linkToApp}</a>
 
 
 
