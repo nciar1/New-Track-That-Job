@@ -1,37 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from "react-bootstrap/Nav";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
-
+import logo from './logo.png';
 const NavBar = () => {
-    return (
+return (
+    <div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="./views/Homepage">Logo</a>
+
+  <a class="navbar-brand" href="./Homepage">
+  <img src={logo} style={{width:40, marginTop: -7}} />
+  Track That Job
+  </a>
+
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown" style={{display: 'inline'}}>
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="./views/Homepage">Home <span class="sr-only">(current)</span></a>
+
+      <li class="nav-item">
+
+        <a class="nav-link" href="./Homepage">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tracker-list">App Tracker</a>
+        <a class="nav-link" href="/tracker-list">App Tracker <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./LogoutPage">Log Out</a>
+        <a class="nav-link" href="./LogoutPage">Log Out <span class="sr-only">(current)</span></a>
       </li>
+    
     
     </ul>
   </div>
-</nav>
-           
-             
-    )
+</nav> 
+</div>
+)
 }
 
 export default NavBar;
