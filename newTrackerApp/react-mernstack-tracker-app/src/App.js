@@ -40,7 +40,7 @@ function App() {
                 <Route path="/tracker-list" component={TrackerList} />
                 <Route path="/view-tracker/:id" component={AppTrackerInfo} />
 
-\
+
 
 
                 <Route path="/LogoutPage" component={LogoutPage} />

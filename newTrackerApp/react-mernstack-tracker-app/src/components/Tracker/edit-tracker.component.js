@@ -224,7 +224,7 @@ export default class EditTracker extends Component {
           </Form.Group>
   
           <Form.Group controlId="text">
-            <Form.Label>additionalNotes </Form.Label>
+            <Form.Label>Additional Notes </Form.Label>
             <Form.Control type="textarea" value={this.state.additionalNotes} onChange={this.onChangeTrackerAdditionalNotes} />
           </Form.Group>
   
@@ -250,10 +250,7 @@ export default class EditTracker extends Component {
             <Form.Control type="textarea" value={this.state.whatTheyDo} onChange={this.onChangeTrackerWhatTheyDo} />
           </Form.Group>
   
-          <Form.Group controlId="text">
-            <Form.Label> Website </Form.Label>
-            <Form.Control type="text" value={this.state.website} onChange={this.onChangeTrackerWebsite} />
-          </Form.Group>
+         
   
   
   

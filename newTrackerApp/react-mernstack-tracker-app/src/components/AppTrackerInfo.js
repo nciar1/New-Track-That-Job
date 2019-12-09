@@ -213,7 +213,6 @@ export default class AppTrackerInfo extends Component {
         <p className="product-description"><b>Company Values: </b>{this.state.companyValues} </p>
 
         <p className="product-description"><b>What They Do: </b>{this.state.whatTheyDo} </p>
-        <a href={this.state.website}target="_blank"><b>Website: </b>{this.state.website}</a>
         
 
 
